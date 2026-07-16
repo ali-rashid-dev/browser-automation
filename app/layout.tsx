@@ -26,7 +26,11 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
     >
       <body>
-        <ClerkProvider appearance={{ theme: shadcn }}>
+        <ClerkProvider
+          appearance={{ theme: shadcn }}
+          taskUrls={{ "choose-organization": "/choose-organization" }}
+
+        >
           <ThemeProvider>
             {children}
             <Toaster />
